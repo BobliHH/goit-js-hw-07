@@ -3,6 +3,8 @@ import { galleryItems } from './gallery-items.js';
 
 const gallery = document.querySelector(".gallery");
 const galleryItem = creategalleryItems(galleryItems);
+gallery.insertAdjacentHTML("beforeend", galleryItem);
+galleryContainer.addEventListener("click", clickOnImg);
 
 function creategalleryItems(items) {
     return items
@@ -17,7 +19,9 @@ function creategalleryItems(items) {
       .join(" ");
 }
 
-gallery.insertAdjacentHTML('beforeend', galleryItem);
+// const basicLightbox = require("basiclightbox");
+
+// import * as basicLightbox from "basiclightbox";
 
 
 console.log(galleryItem);
