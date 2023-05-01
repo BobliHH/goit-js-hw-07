@@ -21,7 +21,7 @@ function creategalleryItems(items) {
 
 const instance = basicLightbox.create(
   `
-<img width="1280" height="auto" src="">`,
+<img width="100%" height="100%" src="">`,
   {
     onShow: (instance) => {
       window.addEventListener("keydown", onEscKeyPress);
