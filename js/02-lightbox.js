@@ -3,6 +3,7 @@ import { galleryItems } from './gallery-items.js';
 
 const gallery = document.querySelector(".gallery");
 const galleryItem = creategalleryItems(galleryItems);
+gallery.insertAdjacentHTML("beforeend", galleryItem);
 
 function creategalleryItems(items) {
   return items
@@ -17,6 +18,7 @@ function creategalleryItems(items) {
     .join(" ");
 }
 
-gallery.insertAdjacentHTML("beforeend", galleryItem);
-
-console.log(galleryItems);
+new SimpleLightbox(".gallery a", {
+  captionsData: "alt",
+  captionDelay: 250,
+});
